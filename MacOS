@@ -1,0 +1,213 @@
+local MacOS = {}
+
+if game.CoreGui:FindFirstChild("MacOS") then
+    game.CoreGui:FindFirstChild("MacOS"):Destroy()
+end
+
+local MacOS = Instance.new("ScreenGui", game.CoreGui)
+
+MacOS.Name = "MacOS"
+
+function Window:Create(name)
+    local Window = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local TopBar = Instance.new("Frame")
+    local UICorner_2 = Instance.new("UICorner")
+    local fix = Instance.new("Frame")
+    local OpenButton = Instance.new("TextButton")
+    local CloseButton = Instance.new("TextButton")
+    local OpenButton_2 = Instance.new("TextLabel")
+    local Line = Instance.new("Frame")
+    local TitleBar = Instance.new("Frame")
+    local UICorner_3 = Instance.new("UICorner")
+    local Title = Instance.new("TextLabel")
+    local fix2 = Instance.new("Frame")
+    local fix3 = Instance.new("Frame")
+    local fix4 = Instance.new("Frame")
+    local Search = Instance.new("Frame")
+    local UICorner_4 = Instance.new("UICorner")
+    local Magnifyingglass = Instance.new("ImageLabel")
+    local SearchText = Instance.new("TextLabel")
+
+    Window.Name = "Window"
+    Window.Parent = MacOS
+    Window.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Window.BorderSizePixel = 0
+    Window.Position = UDim2.new(0.340553582, 0, 0.29896912, 0)
+    Window.Size = UDim2.new(0, 530, 0, 350)
+
+    UICorner.Parent = Window
+
+    TopBar.Name = "TopBar"
+    TopBar.Parent = Window
+    TopBar.BackgroundColor3 = Color3.fromRGB(197, 197, 197)
+    TopBar.Size = UDim2.new(0, 140, 0, 350)
+
+    UICorner_2.Parent = TopBar
+
+    fix.Name = "fix"
+    fix.Parent = TopBar
+    fix.BackgroundColor3 = Color3.fromRGB(197, 197, 197)
+    fix.BorderSizePixel = 0
+    fix.Position = UDim2.new(0.957142889, 0, 0, 0)
+    fix.Size = UDim2.new(0, 6, 0, 350)
+
+    OpenButton.Name = "OpenButton"
+    OpenButton.Parent = TopBar
+    OpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    OpenButton.BackgroundTransparency = 1.000
+    OpenButton.Position = UDim2.new(0.5, 0, 0.0171428565, 0)
+    OpenButton.Size = UDim2.new(0, 30, 0, 30)
+    OpenButton.Font = Enum.Font.SourceSans
+    OpenButton.Text = "🟢"
+    OpenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    OpenButton.TextSize = 18.000
+
+    CloseButton.Name = "CloseButton"
+    CloseButton.Parent = TopBar
+    CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    CloseButton.BackgroundTransparency = 1.000
+    CloseButton.Position = UDim2.new(0.0714285746, 0, 0.0171428565, 0)
+    CloseButton.Size = UDim2.new(0, 30, 0, 30)
+    CloseButton.Font = Enum.Font.SourceSans
+    CloseButton.Text = "🔴"
+    CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+    CloseButton.TextSize = 18.000
+
+    OpenButton_2.Name = "OpenButton"
+    OpenButton_2.Parent = TopBar
+    OpenButton_2.Active = true
+    OpenButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    OpenButton_2.BackgroundTransparency = 1.000
+    OpenButton_2.Position = UDim2.new(0.285714298, 0, 0.0171428565, 0)
+    OpenButton_2.Selectable = true
+    OpenButton_2.Size = UDim2.new(0, 30, 0, 30)
+    OpenButton_2.Font = Enum.Font.SourceSans
+    OpenButton_2.Text = "🟠"
+    OpenButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+    OpenButton_2.TextSize = 18.000
+
+    Line.Name = "Line"
+    Line.Parent = TopBar
+    Line.BackgroundColor3 = Color3.fromRGB(197, 197, 197)
+    Line.BorderSizePixel = 0
+    Line.Position = UDim2.new(1, 0, 0.102857143, 0)
+    Line.Size = UDim2.new(0, 389, 0, 1)
+
+    TitleBar.Name = "TitleBar"
+    TitleBar.Parent = TopBar
+    TitleBar.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+    TitleBar.Position = UDim2.new(1, 0, 0, 0)
+    TitleBar.Size = UDim2.new(0, 390, 0, 36)
+
+    UICorner_3.Parent = TitleBar
+
+    Title.Name = "Title"
+    Title.Parent = TitleBar
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1.000
+    Title.Position = UDim2.new(0.025641026, 0, 0, 0)
+    Title.Size = UDim2.new(0, 191, 0, 37)
+    Title.Font = Enum.Font.Ubuntu
+    Title.Text = name
+    Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+    Title.TextSize = 20.000
+    Title.TextXAlignment = Enum.TextXAlignment.Left
+
+    fix2.Name = "fix2"
+    fix2.Parent = TitleBar
+    fix2.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+    fix2.BorderSizePixel = 0
+    fix2.Size = UDim2.new(0, 10, 0, 13)
+
+    fix3.Name = "fix3"
+    fix3.Parent = TitleBar
+    fix3.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+    fix3.BorderSizePixel = 0
+    fix3.Position = UDim2.new(0, 0, 0.638888896, 0)
+    fix3.Size = UDim2.new(0, 10, 0, 13)
+
+    fix4.Name = "fix4"
+    fix4.Parent = TitleBar
+    fix4.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+    fix4.BorderSizePixel = 0
+    fix4.Position = UDim2.new(0.974358976, 0, 0.638888896, 0)
+    fix4.Size = UDim2.new(0, 10, 0, 13)
+
+    Search.Name = "Search"
+    Search.Parent = TitleBar
+    Search.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Search.BorderSizePixel = 0
+    Search.Position = UDim2.new(0.607692122, 0, 0.166666672, 0)
+    Search.Size = UDim2.new(0, 140, 0, 23)
+
+    UICorner_4.CornerRadius = UDim.new(0, 6)
+    UICorner_4.Parent = Search
+
+    Magnifyingglass.Name = "Magnifying glass"
+    Magnifyingglass.Parent = Search
+    Magnifyingglass.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Magnifyingglass.BackgroundTransparency = 1.000
+    Magnifyingglass.BorderSizePixel = 0
+    Magnifyingglass.Position = UDim2.new(0.042857144, 0, 0, 0)
+    Magnifyingglass.Size = UDim2.new(0, 23, 0, 23)
+    Magnifyingglass.Image = "rbxassetid://11345124025"
+
+    SearchText.Name = "SearchText"
+    SearchText.Parent = Search
+    SearchText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    SearchText.BackgroundTransparency = 1.000
+    SearchText.Position = UDim2.new(0.242857143, 0, 0, 0)
+    SearchText.Size = UDim2.new(0, 71, 0, 25)
+    SearchText.Font = Enum.Font.Ubuntu
+    SearchText.Text = "Search"
+    SearchText.TextColor3 = Color3.fromRGB(197, 197, 197)
+    SearchText.TextSize = 18.000
+    SearchText.TextXAlignment = Enum.TextXAlignment.Left
+
+    local function PWTGOYZ_fake_script() -- CloseButton.CloseScript 
+        local script = Instance.new('LocalScript', CloseButton)
+    
+        script.Parent.MouseButton1Click:Connect(function()
+            script.Parent.Parent.Parent.Visible = false
+            script.Parent.Parent.Parent.Parent.ClosedTopBar.Visible = true
+        end)
+    end
+    coroutine.wrap(PWTGOYZ_fake_script)()
+    local function DUDWWH_fake_script() -- Window.Dragabble 
+        local script = Instance.new('LocalScript', Window)
+    
+        local UserInputService = game:GetService("UserInputService")
+        
+        local MainFrame = script.Parent
+        local RepositioningFrame = MainFrame:WaitForChild("TopBar")
+        
+        local Camera = workspace:WaitForChild("Camera")
+        
+        local DragMousePosition
+        local FramePosition
+        
+        local Draggable = false
+        
+        RepositioningFrame.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                Draggable = true
+                DragMousePosition = Vector2.new(input.Position.X, input.Position.Y)
+                FramePosition = Vector2.new(MainFrame.Position.X.Scale, MainFrame.Position.Y.Scale)
+            end
+        end)
+        
+        RepositioningFrame.InputEnded:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                Draggable = false
+            end
+        end)
+        
+        UserInputService.InputChanged:Connect(function(input)
+            if Draggable == true then
+                local NewPosition = FramePosition + ((Vector2.new(input.Position.X, input.Position.Y) - DragMousePosition) / Camera.ViewportSize)
+                MainFrame.Position = UDim2.new(NewPosition.X, 0, NewPosition.Y, 0)
+            end
+        end)
+    end
+end
