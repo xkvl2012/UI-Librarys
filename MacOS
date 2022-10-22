@@ -9,8 +9,6 @@ local MacOS = Instance.new("ScreenGui", game.CoreGui)
 MacOS.Name = "MacOS"
 
 function MacOS:CreateWindow(name)
-    local Window = {}
-
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
     local TopBar = Instance.new("Frame")
