@@ -1,15 +1,7 @@
 local MacOS = {}
 
-if game.CoreGui:FindFirstChild("MacOS") then
-    game.CoreGui:FindFirstChild("MacOS"):Destroy()
-end
-
-local MacOS = Instance.new("ScreenGui", game.CoreGui)
-
-MacOS.Name = "MacOS"
-
-function CreateWindow(name)
-    local win = {}
+function MacOS:Create(name)
+    local MacOS = Instance.new("ScreenGui", game.CoreGui)
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
     local TopBar = Instance.new("Frame")
@@ -29,6 +21,9 @@ function CreateWindow(name)
     local UICorner_4 = Instance.new("UICorner")
     local Magnifyingglass = Instance.new("ImageLabel")
     local SearchText = Instance.new("TextLabel")
+
+    MacOS.Name = "MacOS"
+    MacOS.Parent = game.CoreGui
 
     Window.Name = "Window"
     Window.Parent = MacOS
@@ -110,7 +105,7 @@ function CreateWindow(name)
     Title.Position = UDim2.new(0.025641026, 0, 0, 0)
     Title.Size = UDim2.new(0, 191, 0, 37)
     Title.Font = Enum.Font.Ubuntu
-    Title.Text = name
+    Title.Text = name or "MacOS ui"
     Title.TextColor3 = Color3.fromRGB(0, 0, 0)
     Title.TextSize = 20.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -168,16 +163,17 @@ function CreateWindow(name)
 
     local function PWTGOYZ_fake_script() -- CloseButton.CloseScript 
         local script = Instance.new('LocalScript', CloseButton)
-    
+
         script.Parent.MouseButton1Click:Connect(function()
-            script.Parent.Parent.Parent.Visible = false
-            script.Parent.Parent.Parent.Parent.ClosedTopBar.Visible = true
+            if game.CoreGui:WaitForChild("MacOS") then
+                game.CoreGui:WaitForChild("MacOS"):Destroy()
+            end
         end)
     end
     coroutine.wrap(PWTGOYZ_fake_script)()
     local function DUDWWH_fake_script() -- Window.Dragabble 
         local script = Instance.new('LocalScript', Window)
-    
+
         local UserInputService = game:GetService("UserInputService")
         
         local MainFrame = script.Parent
@@ -211,4 +207,6 @@ function CreateWindow(name)
             end
         end)
     end
+    coroutine.wrap(DUDWWH_fake_script)()
 end
+
