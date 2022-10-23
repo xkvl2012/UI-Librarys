@@ -1,6 +1,6 @@
 local MacOS = {}
 
-function MacOS:Create(name)
+function MacOS:new(name)
     local MacOS = Instance.new("ScreenGui", game.CoreGui)
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
