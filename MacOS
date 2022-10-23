@@ -1,6 +1,11 @@
-local MacOS = {}
+local cgui = game.CoreGui
+if cgui:FindFirstChild("MacOS") then
+    cgui:FindFirstChild("MacOS"):Destroy()
+end
 
-function MacOS:new(name)
+local Library = {}
+
+function MacOS(name)
     local MacOS = Instance.new("ScreenGui", game.CoreGui)
     local Window = Instance.new("Frame")
     local UICorner = Instance.new("UICorner")
@@ -105,7 +110,7 @@ function MacOS:new(name)
     Title.Position = UDim2.new(0.025641026, 0, 0, 0)
     Title.Size = UDim2.new(0, 191, 0, 37)
     Title.Font = Enum.Font.Ubuntu
-    Title.Text = name or "MacOS ui"
+    Title.Text = name
     Title.TextColor3 = Color3.fromRGB(0, 0, 0)
     Title.TextSize = 20.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -209,4 +214,3 @@ function MacOS:new(name)
     end
     coroutine.wrap(DUDWWH_fake_script)()
 end
-
